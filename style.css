@@ -510,3 +510,50 @@ nav a{
 .phoneGif{
     width: 45%;
 }
+
+#randomTip {
+    padding: 100px 50px;
+    background: var(--mainBg);
+}
+
+.tipCard {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--orangeaccents), #ff9f3d);
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(255, 126, 12, 0.3);
+}
+
+.tipBadge {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: var(--oppAccents);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tipTitle {
+    font-size: var(--bigFont);
+    font-weight: 700;
+    color: var(--textWhite);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.tipText {
+    font-size: var(--smallFont);
+    color: var(--textWhite);
+    line-height: 1.8;
+    font-weight: 500;
+}
