@@ -337,7 +337,7 @@ nav a{
     font-weight: 500;
 }
 
-#scenarioOption{
+.scenarioOption{
     display: flex;
     gap: 12px;
     padding: 19px;
@@ -348,6 +348,7 @@ nav a{
     color: rgba(253, 245, 237, 0.60);
     font-size: 16px;
     position: relative;
+    cursor: pointer;
 }
 
 .wrong{
@@ -360,7 +361,7 @@ nav a{
     margin-bottom: 10px;
 }
 
-#sQuestion{
+#sQuestion1, #sQuestion2, #sQuestion3, #sQuestion4, #sQuestion5, #sQuestion6, #sQuestion7, #sQuestion8{
     position: absolute;
     top: 0;
     left: 0;
@@ -375,4 +376,32 @@ nav a{
     font-size: var(--smallFont);
     font-weight: 500;
     color: var(--textBlack);
+    opacity: 1;
+    transition: all 300ms ease;
+    border: none;
+    text-align: start;
+    cursor: pointer;
 }
+
+.sQuestion{
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--orangeaccents);
+        border-radius: 90px;
+        display: flex;
+        padding: 0 20px;
+        box-sizing: border-box;
+        align-items: center;
+        font-size: var(--smallFont);
+        font-weight: 500;
+        color: var(--textBlack);
+        opacity: 1;
+        transition: all 300ms ease;
+        border: none;
+        text-align: start;
+        cursor: pointer;
+}
+

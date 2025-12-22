@@ -38,26 +38,77 @@ for (i = 0; i < cards.length; i++) {
 }
 
 
-const scenarios = [
+let scenarios = [
     {
         text: "A caller claims to be from tech support saying your computer has a virus and needs immediate remote access.",
         wrong: "Give them remote access to your computer",
-        right: "Hang up and contact the company directly using official contact information"
+        right: "Hang up and contact the company directly using official contact information",
+        btnId1: "sQuestion1",
+        btnId2: "sQuestion2"
     },
     {
         text: "You receive an email claiming your account will be suspended unless you verify your password immediately.",
         wrong: "Click the link and enter your password",
-        right: "Go directly to the official website and check your account status"
+        right: "Go directly to the official website and check your account status",
+        btnId1: "sQuestion3",
+        btnId2: "sQuestion4"
     },
     {
         text: 'You get a text about suspicious activity on your credit card with a link to "verify" your account.',
         wrong: "Click the link and enter your card details",
-        right: "Call the number on the back of your card to verify"
+        right: "Call the number on the back of your card to verify",
+        btnId1: "sQuestion5",
+        btnId2: "sQuestion6"
     },
     {
         text: 'A friend sends you a message with a shortened link saying "Is this you in this video?"',
         wrong: "Click the link immediately out of curiosity",
-        right: "Contact your friend through another method to verify they sent it"
+        right: "Contact your friend through another method to verify they sent it",
+        btnId1: "sQuestion7",
+        btnId2: "sQuestion8"
     }
 ];
+
+let scenarioSec = document.getElementById("scenarioGrid");
+let sQuestion = document.getElementById("sQuestion");
+
+
+
+for (i = 0; i < scenarios.length; i++) {
+
+    scenarioSec.innerHTML += `
+        <div class="scenarioCard">
+                    <p class="scenarioText">${scenarios[i].text}</p>
+                    <div class="scenarioOption">
+                        <img src="Images/Icons/wrong.svg" alt="">
+                        <div class="answer">
+                            <p class="wrong">Common Mistake</p>
+                            <p class="answerText">${scenarios[i].wrong}</p>
+                        </div>
+                        <button class="sQuestion">
+                            ${scenarios[i].wrong}
+                        </button>
+                    </div>
+                    <div class="scenarioOption">
+                        <img src="Images/Icons/correct.svg" alt="">
+                        <div class="answer">
+                            <p class="correct">Correct Action</p>
+                            <p class="answerText">${scenarios[i].right}</p>
+                        </div>
+                        <button class="sQuestion">
+                            ${scenarios[i].right}
+                        </button>
+                    </div>
+                </div>
+    `
+}
+
+scenarioSec.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("sQuestion")) return;
+
+    const option = e.target.closest(".sQuestion");
+    option.style.opacity = "0";
+});
+
+
 
