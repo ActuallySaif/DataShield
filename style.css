@@ -405,3 +405,44 @@ nav a{
         cursor: pointer;
 }
 
+#factCards {
+    padding: 100px 50px;
+    background: var(--mainBg);
+}
+
+.factsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.factCard {
+    background: var(--cardBg);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.factCard:hover {
+    background: var(--orangeaccents);
+    transform: scale(1.05);
+}
+
+.factIcon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.factText {
+    font-size: var(--vSmallFont);
+    color: var(--oppAccents);
+    line-height: 1.6;
+}
+
+.factCard:hover .factText {
+    color: var(--textWhite);
+}

@@ -110,5 +110,44 @@ scenarioSec.addEventListener("click", function (e) {
     option.style.opacity = "0";
 });
 
+const facts = [
+    {
+        icon: "🔒",
+        text: "Passwords should be at least 12 characters long and include numbers, symbols, and mixed case letters"
+    },
+    {
+        icon: "📧",
+        text: "95% of cybersecurity breaches are caused by human error, not technology failures"
+    },
+    {
+        icon: "🎣",
+        text: "Phishing emails have a 30% open rate, making them one of the most effective attack methods"
+    },
+    {
+        icon: "⚠️",
+        text: "Cybercrime damages are projected to reach $10.5 trillion annually by 2025"
+    },
+    {
+        icon: "🛡️",
+        text: "Two-factor authentication blocks 99.9% of automated attacks on your accounts"
+    },
+    {
+        icon: "💻",
+        text: "A new phishing site is created every 20 seconds worldwide"
+    }
+];
+
+// Generate Fact Cards
+const factsGrid = document.getElementById('factsGrid');
+facts.forEach(fact => {
+    factsGrid.innerHTML += `
+        <div class="factCard">
+            <div class="factIcon">${fact.icon}</div>
+            <p class="factText">${fact.text}</p>
+        </div>
+    `;
+});
+
+
 
 
