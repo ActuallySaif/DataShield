@@ -137,7 +137,6 @@ const facts = [
     }
 ];
 
-// Generate Fact Cards
 const factsGrid = document.getElementById('factsGrid');
 facts.forEach(fact => {
     factsGrid.innerHTML += `
@@ -147,6 +146,7 @@ facts.forEach(fact => {
         </div>
     `;
 });
+
 
 
 

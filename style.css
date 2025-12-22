@@ -403,33 +403,34 @@ nav a{
         border: none;
         text-align: start;
         cursor: pointer;
+        font-family: 'Outfit';
 }
 
 #factCards {
-    padding: 100px 50px;
+    padding: 50px;
     background: var(--mainBg);
 }
 
 .factsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, minmax(100px, 1fr));
     gap: 25px;
-    max-width: 1400px;
-    margin: 0 auto;
+    margin-top: 60px;
 }
 
 .factCard {
     background: var(--cardBg);
-    border-radius: 15px;
+    border-radius: 40px;
     padding: 30px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 200ms ease;
     cursor: pointer;
 }
 
 .factCard:hover {
     background: var(--orangeaccents);
-    transform: scale(1.05);
+    border-radius: 15px 15px 40px 40px;
 }
 
 .factIcon {
@@ -445,4 +446,50 @@ nav a{
 
 .factCard:hover .factText {
     color: var(--textWhite);
+}
+
+#learnMore {
+    padding: 50px;
+    background: var(--mainBg);
+}
+
+.learnContent {
+    max-width: 900px;
+    margin: 30px auto 0 auto;
+    background: var(--cardBg);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.learnPreview {
+    font-size: var(--smallFont);
+    color: var(--oppAccents);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+#learnExpanded {
+    display: none;
+    margin-top: 20px;
+}
+
+
+#readMoreBtn {
+    padding: 15px 50px;
+    background: var(--orangeaccents);
+    color: var(--textWhite);
+    border: none;
+    border-radius: 90px;
+    font-size: var(--smallFont);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 200ms ease;
+    font-family: 'Outfit';
+}
+
+#readMoreBtn:hover {
+    background: var(--oppAccents);
+    color: var(--textBlack);
+    border-radius: 35px 35px 5px 5px;
 }
