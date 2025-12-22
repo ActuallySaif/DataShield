@@ -451,6 +451,15 @@ nav a{
 #learnMore {
     padding: 50px;
     background: var(--mainBg);
+    display: flex;
+    align-items: center;
+}
+
+.learnTitle{
+    font-size: var(--secTitle);
+    color: var(--oppAccents);
+    font-weight: 600;
+    margin-bottom: 30px;
 }
 
 .learnContent {
@@ -469,11 +478,14 @@ nav a{
     margin-bottom: 30px;
 }
 
-#learnExpanded {
+.learnExpanded {
     display: none;
     margin-top: 20px;
 }
 
+.learnExpanded.show {
+    display: inline;
+}
 
 #readMoreBtn {
     padding: 15px 50px;

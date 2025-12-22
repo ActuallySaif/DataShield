@@ -148,6 +148,18 @@ facts.forEach(fact => {
 });
 
 
+const readMoreBtn = document.getElementById('readMoreBtn');
+const learnExpanded = document.getElementById('learnExpanded');
+
+readMoreBtn.addEventListener('click', () => {
+    if (learnExpanded.classList.contains('show')) {
+        learnExpanded.classList.remove('show');
+        readMoreBtn.textContent = 'Read More';
+    } else {
+        learnExpanded.classList.add('show');
+        readMoreBtn.textContent = 'Read Less';
+    }
+});
 
 
 
