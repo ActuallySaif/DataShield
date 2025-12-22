@@ -71,133 +71,35 @@
             </div>
         </section>
 
-        <!-- Interactive Scenarios Section -->
         <section id="scenarios">
-            <p class="secTitle">What Would You Do?</p>
-            <p class="sectionSub">What Would You Do?</p>
-            <div class="scenarioGrid" id="scenarioGrid"></div>
-        </section>
-        
-        <!-- Fact Cards Section -->
-        <section id="factCards">
-            <p class="secTitle">Did You Know?</p>
-            <div class="factsGrid" id="factsGrid"></div>
-        </section>
-        
-        <!-- Learn More Section -->
-        <section id="learnMore">
-            <p class="secTitle">Understanding Cybersecurity</p>
-            <div class="learnContent">
-                <p class="learnPreview">
-                    Cybersecurity isn't just about technology—it's about awareness. Every day, millions of people
-                    fall victim to scams that could have been prevented with basic knowledge.
-                    <span class="learnExpanded" id="learnExpanded">
-                        Phishing attacks, social engineering, and data breaches are becoming more sophisticated.
-                        Scammers use psychological tactics to manipulate victims, creating false urgency and
-                        exploiting trust. The good news? Most attacks can be stopped by following simple security
-                        practices: verify sender identities, never share passwords, enable two-factor authentication,
-                        and think before you click. By staying informed and vigilant, you can protect yourself and
-                        your loved ones from becoming another statistic.
-                    </span>
-                </p>
-                <button class="readMoreBtn" id="readMoreBtn">Read More</button>
-            </div>
-        </section>
-        
-        <!-- Random Tip Section -->
-        <section id="randomTip">
-            <div class="tipCard">
-                <div class="tipBadge">💡</div>
-                <p class="tipTitle">Today's Safety Tip</p>
-                <p class="tipText" id="tipText"></p>
-            </div>
-        </section>
-        
-        <!-- Image Slider Section -->
-        <section id="imageSlider">
-            <p class="secTitle">Recognize the Warning Signs</p>
-            <div class="sliderContainer">
-                <button class="sliderBtn sliderPrev" id="sliderPrev">‹</button>
-                <div class="sliderContent">
-                    <div class="sliderTrack" id="sliderTrack">
-                        <div class="slide">
-                            <div class="slidePlaceholder">
-                                <p>Phishing Email Example</p>
-                            </div>
+            <p class="sectionTitle">What Would You Do?</p>
+            <p class="sectionSub">Test your scam awareness with these real-world scenarios</p>
+            <div class="scenarioGrid" id="scenarioGrid">
+                <div class="scenarioCard">
+                    <p class="scenarioText">A caller claims to be from tech support saying your computer has a virus and needs immediate remote access.</p>
+                    <div id="scenarioOption">
+                        <img src="Images/Icons/wrong.svg" alt="">
+                        <div class="answer">
+                            <p class="wrong">Common Mistake</p>
+                            <p class="answerText">Give them remote access to your computer</p>
                         </div>
-                        <div class="slide">
-                            <div class="slidePlaceholder">
-                                <p>Fake Website Warning</p>
-                            </div>
+                        <div id="sQuestion">
+                            01. Give them remote access to your computer
                         </div>
-                        <div class="slide">
-                            <div class="slidePlaceholder">
-                                <p>Suspicious Text Message</p>
-                            </div>
+                    </div>
+                    <div id="scenarioOption">
+                        <img src="Images/Icons/correct.svg" alt="">
+                        <div class="answer">
+                            <p class="correct">Correct Action</p>
+                            <p class="answerText">Hang up and contact the company directly using official contact information</p>
                         </div>
-                        <div class="slide">
-                            <div class="slidePlaceholder">
-                                <p>Social Media Scam</p>
-                            </div>
+                        <div id="sQuestion">
+                            02. Hang up and contact the company directly using official contact information
                         </div>
                     </div>
                 </div>
-                <button class="sliderBtn sliderNext" id="sliderNext">›</button>
-            </div>
-            <div class="sliderDots" id="sliderDots"></div>
-        </section>
-        
-        <!-- Call to Action Section -->
-        <section id="ctaSection">
-            <div class="ctaContent">
-                <p class="ctaTitle">Stay Alert. Stay Secure.</p>
-                <p class="ctaSubtitle">Join thousands protecting themselves online</p>
-                <a href="#" class="ctaButton">Take the Pledge</a>
             </div>
         </section>
-        </main>
-        
-        <!-- Footer -->
-        <footer>
-            <div class="footerContent">
-                <div class="footerTop">
-                    <div class="footerBrand">
-                        <div class="footerLogo"></div>
-                        <p class="footerSlogan">Think before you click</p>
-                    </div>
-                    <div class="footerLinks">
-                        <div class="footerColumn">
-                            <p>Quick Links</p>
-                            <a href="#">Home</a>
-                            <a href="#">Learn</a>
-                            <a href="#">Gallery</a>
-                            <a href="#">Contact</a>
-                        </div>
-                        <div class="footerColumn">
-                            <p>Resources</p>
-                            <a href="#">Safety Tips</a>
-                            <a href="#">Report Scam</a>
-                            <a href="#">FAQs</a>
-                        </div>
-                        <div class="footerColumn">
-                            <p>Connect</p>
-                            <div class="socialIcons">
-                                <a href="#" class="socialIcon">f</a>
-                                <a href="#" class="socialIcon">t</a>
-                                <a href="#" class="socialIcon">i</a>
-                                <a href="#" class="socialIcon">in</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footerBottom">
-                    <p>&copy; 2024 Datashield. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-        
-        <!-- Scroll to Top Button -->
-        <button id="scrollToTop" class="scrollToTop">↑</button>
     </main>
 
 
