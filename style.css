@@ -1,0 +1,296 @@
+:root{
+    --mainBg: #070707;
+    --oppAccents: #FDF5ED;
+    --orangeaccents: #FF7E0C;
+    --textBlack: black;
+    --textWhite: white;
+    --cardBg: #1A1A1A;
+    --heroFont: 96px;
+    --vBigFont: 72px;
+    --secTitle: 64px;
+    --cardTitle: 48px;
+    --bigFont: 30px;
+    --normFont: 24px;
+    --smallFont: 18px;
+    --vSmallFont: 16px;
+    --LogoHeader: url(Images/LogoWhite.svg);
+    --navBord: 3px solid #000;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--oppAccents);
+    border-radius: 90px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(Fonts/Outfit-VariableFont_wght.ttf);
+}
+
+body{
+    background: var(--mainBg);
+    font-family: 'Outfit';
+    position: relative;
+}
+
+header{
+    padding: 60px 50px 50px 50px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    z-index: 99;
+    justify-content: space-between;
+}
+
+.headerLeft{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    padding: 16px 51px;
+    border-radius: 90px;
+    border: var(--navBord);
+    display: flex;
+    gap: 76px;
+    position: fixed;
+    margin-left: 280px;
+    background: var(--oppAccents);
+}
+
+nav a{
+    color: var(--textWhite);
+    font-size: var(--bigFont);
+    font-weight: 600;
+    text-decoration: none;
+    mix-blend-mode: difference;
+}
+
+.logo{
+    width: 240px;
+    height: 50px;
+    background: var(--LogoHeader);
+}
+
+.headerRight{
+    display: flex;
+    gap: 20px;
+}
+
+#langBtn{
+    padding: 18px 62px;
+    background: transparent;
+    border: var(--oppAccents) 3px solid;
+    border-radius: 90px;
+    color: var(--oppAccents);
+    font-family: 'Outfit';
+    font-size: var(--bigFont);
+    font-weight: 600;
+    transition: 200ms ease all;
+    cursor: pointer;
+}
+
+#langBtn:hover, #loginBtn:hover{
+    border-radius: 10px 10px 40px 40px;
+}
+
+#loginBtn{
+    padding: 18px 62px;
+    background: var(--oppAccents);
+    border: var(--oppAccents) 3px solid;
+    border-radius: 90px;
+    color: var(--textBlack);
+    font-family: 'Outfit';
+    font-size: var(--bigFont);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 200ms linear;
+}
+
+#hero{
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.heroContent{
+    width: 100%;
+    height: 100%;
+    background: var(--oppAccents);
+    mask: url(Images/heroBg.svg) center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.heroText{
+    padding-left: 40px;
+    width: 50%;
+}
+
+.heroTitle{
+   font-size: var(--heroFont);
+   font-weight: 600;
+   color: var(--textBlack);
+   width: 70%;
+}
+
+.heroSub{
+    font-size: var(--bigFont);
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.heroGif{
+    width: 40%;
+}
+
+.heroCta{
+    padding: 16px 84px;
+    background: var(--oppAccents);
+    color: var(--textBlack);
+    font-size: var(--bigFont);
+    font-weight: 600;
+    text-decoration: none;
+    position: absolute;
+    border-radius: 90px;
+    bottom: 50px;
+    right: 50px;
+    z-index: 6;
+    transition: all 200ms ease;
+}
+
+.heroCta:hover{
+    border-radius: 40px 40px 10px 10px;
+}
+
+#stats{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.statCard{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 382px;
+    box-sizing: border-box;
+}
+
+.statOrd{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--oppAccents);
+    z-index: 5;
+    font-size: var(--vBigFont);
+    font-weight: 600;
+    
+}
+.statCardContent{
+    padding: 60px 50px;
+    background-color: var(--cardBg);
+    mask: url(Images/statBg.svg) center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.statNum{
+    font-size: var(--vBigFont);
+    color: var(--oppAccents);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.statSub{
+    width: 75%;
+    text-align: center;
+    font-size: var(--normFont);
+    color: rgba(253, 245, 237, 0.80);
+    font-weight: 300;
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+
+.sectionTitle {
+    font-size: var(--secTitle);
+    font-weight: 600;
+    color: var(--oppAccents);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#scams{
+    padding: 100px 50px;
+    background: var(--mainBg);
+}
+
+.scamSteps {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.scamStep {
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.stepIcon {
+    margin-bottom: 30px;
+    padding: 32px;
+    background: var(--orangeaccents);
+    width: fit-content;
+    border-radius: 90px;
+
+}
+
+.stepNum{
+    color: var(--textWhite);
+    padding: 13px 20px;
+    background-color: var(--orangeaccents);
+    border-radius: 90px;
+    margin-bottom: 10px;
+}
+
+
+.stepTitle {
+    font-size: var(--bigFont);
+    font-weight: 600;
+    color: var(--oppAccents);
+    margin-bottom: 15px;
+}
+
+.stepDesc {
+    font-size: var(--smallFont);
+    color: rgba(253, 245, 237, 0.7);
+    line-height: 1.6;
+    width: 317px;
+}
