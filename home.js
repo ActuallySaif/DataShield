@@ -179,11 +179,49 @@ let randomTip = Math.floor(Math.random() * tips.length);
 
 tipText.innerHTML = tips[randomTip];
 
+
+
+
+
 let currentSlide = 0;
+let sliderTrack = document.getElementById('sliderTrack');
+
+let galImages = [
+    {
+        img : 'Images/Ga1',
+        text: 'Protect Your Privacy',
+        placeholderId: 'slidePlaceholder1'
+    },
+    {
+        img: 'Images/Ga2',
+        text: 'Protect Your Privacy',
+        placeholderId: 'slidePlaceholder2'
+    }, {
+        img: 'Images/Ga3',
+        text: 'Protect Your Privacy',
+        placeholderId: 'slidePlaceholder3'
+    }, {
+        img: 'Images/Ga4',
+        text: 'Protect Your Privacy',
+        placeholderId: 'slidePlaceholder4'
+    }
+]
+
+for (i = 0; i < galImages.length; i++) {
+    sliderTrack.innerHTML += `
+        <div class="slide">
+            <div id="${galImages[i].placeholderId}">
+                 <p>${galImages[i].text}</p>
+            </div>
+        </div>
+    `
+}
+
 let slides = document.querySelectorAll('.slide');
 let totalSlides = slides.length;
-let sliderTrack = document.getElementById('sliderTrack');
 let sliderDots = document.getElementById('sliderDots');
+
+
 
 // Create dots
 for (let i = 0; i < totalSlides; i++) {
@@ -224,3 +262,43 @@ function goToSlide(index) {
 
 document.getElementById('sliderNext').addEventListener('click', nextSlide);
 document.getElementById('sliderPrev').addEventListener('click', prevSlide);
+
+let lightboxImg = [
+    {
+        img: 'Images/Gal1',
+        lbImgId: 'lightBoxImg1'
+    },
+    {
+        img: 'Images/Gal2',
+        lbImgId: 'lightBoxImg2'
+    },
+    {
+        img: 'Images/Gal3',
+        lbImgId: 'lightBoxImg3'
+    },
+    {
+        img: 'Images/Gal4',
+        lbImgId: 'lightBoxImg4'
+    },
+]
+
+let lightbox = document.getElementById('lightBox');
+
+for (i = 0; i < lightboxImg.length; i++) {
+    lightbox.innerHTML += `
+        <div id="${lightboxImg[i].lbImgId}">
+                <img id="closeBtn" src="Images/close.svg" alt="">
+            </div>
+    `
+}
+
+let img1 = document.getElementById("slidePlaceholder1");
+let lightboxImg1 = document.getElementById("lightBoxImg1");
+let lightboxImg2 = document.getElementById("lightBoxImg2");
+let lightboxImg3 = document.getElementById("lightBoxImg3");
+let lightboxImg4 = document.getElementById("lightBoxImg4");
+
+img1.addEventListener("click", () => {
+    lightboxImg1.style.display = "block"
+})
+
