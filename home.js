@@ -179,3 +179,48 @@ let randomTip = Math.floor(Math.random() * tips.length);
 
 tipText.innerHTML = tips[randomTip];
 
+let currentSlide = 0;
+let slides = document.querySelectorAll('.slide');
+let totalSlides = slides.length;
+let sliderTrack = document.getElementById('sliderTrack');
+let sliderDots = document.getElementById('sliderDots');
+
+// Create dots
+for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    sliderDots.appendChild(dot);
+}
+
+function updateSlider() {
+    sliderTrack.style.transform = `translateX(-${currentSlide * 1080}px)`;
+
+    // Update dots
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+        if (index === currentSlide) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+}
+
+document.getElementById('sliderNext').addEventListener('click', nextSlide);
+document.getElementById('sliderPrev').addEventListener('click', prevSlide);
