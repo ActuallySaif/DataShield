@@ -137,7 +137,7 @@ const facts = [
     }
 ];
 
-const factsGrid = document.getElementById('factsGrid');
+let factsGrid = document.getElementById('factsGrid');
 facts.forEach(fact => {
     factsGrid.innerHTML += `
         <div class="factCard">
@@ -148,8 +148,8 @@ facts.forEach(fact => {
 });
 
 
-const readMoreBtn = document.getElementById('readMoreBtn');
-const learnExpanded = document.getElementById('learnExpanded');
+let readMoreBtn = document.getElementById('readMoreBtn');
+let learnExpanded = document.getElementById('learnExpanded');
 
 readMoreBtn.addEventListener('click', () => {
     if (learnExpanded.classList.contains('show')) {
@@ -161,5 +161,21 @@ readMoreBtn.addEventListener('click', () => {
     }
 });
 
+let tips = [
+    "Never share your password with anyone, even if they claim to be from IT support",
+    "Always verify the sender's email address before clicking any links",
+    "Use unique passwords for different accounts to prevent cascading breaches",
+    "Enable two-factor authentication on all your important accounts",
+    "Be suspicious of messages creating false urgency or pressure",
+    "Hover over links to see the actual URL before clicking",
+    "Keep your software and operating system updated with latest security patches",
+    "Use a password manager to generate and store strong passwords",
+    "Be cautious of unexpected attachments, even from known contacts",
+    "Check for HTTPS and a padlock icon before entering sensitive information"
+];
 
+let tipText = document.getElementById("tipText");
+let randomTip = Math.floor(Math.random() * tips.length);
+
+tipText.innerHTML = tips[randomTip];
 
