@@ -453,6 +453,7 @@ nav a{
     background: var(--mainBg);
     display: flex;
     align-items: center;
+    gap: 50px;
 }
 
 .learnTitle{
@@ -504,4 +505,8 @@ nav a{
     background: var(--oppAccents);
     color: var(--textBlack);
     border-radius: 35px 35px 5px 5px;
+}
+
+.phoneGif{
+    width: 45%;
 }
