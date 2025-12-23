@@ -15,6 +15,7 @@
     --vSmallFont: 16px;
     --LogoHeader: url(Images/LogoWhite.svg);
     --navBord: 3px solid #000;
+    --whiteBg: white;
 }
 
 ::-webkit-scrollbar {
@@ -684,6 +685,7 @@ nav a{
 .contactContent{
     display: flex;
     margin-top: 60px;
+    gap: 50px;
 }
 
 .contactForm{
@@ -775,11 +777,23 @@ label{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url(Images/Gal1.png);
     position: fixed;
     padding: 50px;
     box-sizing: border-box;
     display: none;
+}
+
+#lightBoxImg1{
+    background-image: url(Images/Gal1.png);
+}
+#lightBoxImg2{
+    background-image: url(Images/Gal2.jpg);
+}
+#lightBoxImg3{
+    background-image: url(Images/Gal3.jpg);
+}
+#lightBoxImg4{
+    background-image: url(Images/Gal4.jpg);
 }
 
 #closeBtn{
@@ -787,4 +801,77 @@ label{
     position: absolute;
     right: 50px;
     cursor: pointer;
+}
+
+.contactCards{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contactInfo{
+    background: var(--cardBg);
+    padding: 50px;
+    border-radius: 40px;
+}
+
+.formTitle2{
+    font-size: var(--secTitle);
+    color: var(--textWhite);
+    font-weight: 600;
+    
+}
+
+.infoDivs{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.infoDiv{
+    display: flex;
+    gap: 20px;
+    align-items: start;
+}
+
+.divTitle{
+    color: var(--textWhite);
+    font-size: var(--normFont);
+    font-weight: 600;
+}
+
+.divContent{
+    color: rgba(253, 245, 237, 0.70);
+    font-size: var(--smallFont);
+}
+
+.report{
+    padding: 50px;
+    background: var(--orangeaccents);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.reportTitle{
+    font-size: var(--secTitle);
+    font-weight: 600;
+    color: var(--textWhite);
+}
+
+.reportP{
+    font-size: var(--vSmallFont);
+    font-weight: 300;
+    color: var(--textWhite);
+}
+
+.reportBtn{
+    text-decoration: none;
+    color: var(--orangeaccents);
+    background-color: var(--textWhite);
+    padding: 16px;
+    border: 90px;
 }

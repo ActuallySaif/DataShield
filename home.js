@@ -188,28 +188,32 @@ let sliderTrack = document.getElementById('sliderTrack');
 
 let galImages = [
     {
-        img : 'Images/Ga1',
+        img : 'Images/Gal1',
         text: 'Protect Your Privacy',
-        placeholderId: 'slidePlaceholder1'
+        placeholderId: 'slidePlaceholder1',
+        funcName: 'openLightBox1()'
     },
     {
-        img: 'Images/Ga2',
+        img: 'Images/Gal2',
         text: 'Protect Your Privacy',
-        placeholderId: 'slidePlaceholder2'
+        placeholderId: 'slidePlaceholder2',
+        funcName: 'openLightBox2()'
     }, {
-        img: 'Images/Ga3',
+        img: 'Images/Gal3',
         text: 'Protect Your Privacy',
-        placeholderId: 'slidePlaceholder3'
+        placeholderId: 'slidePlaceholder3',
+        funcName: 'openLightBox3()'
     }, {
-        img: 'Images/Ga4',
+        img: 'Images/Gal4',
         text: 'Protect Your Privacy',
-        placeholderId: 'slidePlaceholder4'
+        placeholderId: 'slidePlaceholder4',
+        funcName: 'openLightBox4()'
     }
 ]
 
 for (i = 0; i < galImages.length; i++) {
     sliderTrack.innerHTML += `
-        <div class="slide">
+        <div class="slide" data-img="${galImages[i].img}" onclick="${galImages[i].funcName}">
             <div id="${galImages[i].placeholderId}">
                  <p>${galImages[i].text}</p>
             </div>
@@ -287,7 +291,7 @@ let lightbox = document.getElementById('lightBox');
 for (i = 0; i < lightboxImg.length; i++) {
     lightbox.innerHTML += `
         <div id="${lightboxImg[i].lbImgId}">
-                <img id="closeBtn" src="Images/close.svg" alt="">
+                <img id="closeBtn" src="Images/close.svg" alt="" onclick="closeLightBox()">
             </div>
     `
 }
@@ -298,7 +302,27 @@ let lightboxImg2 = document.getElementById("lightBoxImg2");
 let lightboxImg3 = document.getElementById("lightBoxImg3");
 let lightboxImg4 = document.getElementById("lightBoxImg4");
 
-img1.addEventListener("click", () => {
-    lightboxImg1.style.display = "block"
-})
+function openLightBox1() {
+    lightboxImg1.style.display = 'block';
+}
+
+function openLightBox2() {
+    lightboxImg2.style.display = 'block';
+}
+
+function openLightBox3() {
+    lightboxImg3.style.display = 'block';
+}
+
+function openLightBox4() {
+    lightboxImg4.style.display = 'block';
+}
+
+function closeLightBox() {
+    lightboxImg1.style.display = 'none';
+    lightboxImg2.style.display = 'none';
+    lightboxImg3.style.display = 'none';
+    lightboxImg4.style.display = 'none';
+}
+
 
