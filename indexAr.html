@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داتاشيلد | تسجيل الدخول</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/Icon.png">
+</head>
+<body class="lightMode">
+    <header>
+        <div class="headerLeft">
+            <div class="logo"></div>
+            <nav>
+                <a href="#">الرئيسية</a>
+                <a href="#stats">تعلّم</a>
+                <a href="#gallery">المعرض</a>
+                <a href="#contact">تواصل معنا</a>
+                <div id="themeSwitcher"></div>
+            </nav>
+        </div>
+        <div class="headerRight">
+            <button id="langBtn">العربية</button>
+            <a id="loginBtn" href="login.html">تسجيل الدخول</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="heroContent">
+                <div class="heroText">
+                    <p class="heroTitle"><span>فكّر</span> قبل ما تضغط</p>
+                    <p class="heroSub">روابط مزيفة. رسائل مزيفة. عواقب حقيقية.</p>
+                </div>
+                <div class="heroGif"></div>
+            </div>
+            <a class="heroCta" href="#">احمِ نفسك</a>
+        </section>
+
+        <section id="stats">
+        </section>
+
+        <section id="scams">
+            <p class="secTitle">كيف تعمل عمليات الاحتيال</p>
+            <div class="scamSteps">
+                <div class="scamStep">
+                    <div class="stepIcon">
+                        <img src="Images/Icons/scam1.svg" alt="">
+                    </div>
+                    <p class="stepNum">1</p>
+                    <p class="stepTitle">كسب ثقتك</p>
+                    <p class="stepDesc">ينتحل المحتالون صفة جهات رسمية أو أشخاص تعرفهم</p>
+                </div>
+                <div class="scamStep">
+                    <div class="stepIcon">
+                        <img src="Images/Icons/scam2.svg" alt="">
+                    </div>
+                    <p class="stepNum">2</p>
+                    <p class="stepTitle">خلق شعور بالاستعجال</p>
+                    <p class="stepDesc">يضغطون عليك للتصرف بسرعة دون تفكير</p>
+                </div>
+                <div class="scamStep">
+                    <div class="stepIcon">
+                        <img src="Images/Icons/scam3.svg" alt="">
+                    </div>
+                    <p class="stepNum">3</p>
+                    <p class="stepTitle">سرقة بياناتك</p>
+                    <p class="stepDesc">يخدعونك لمشاركة معلوماتك الحساسة</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="scenarios">
+            <p class="secTitle">ماذا ستفعل؟</p>
+            <p class="sectionSub">اختبر وعيك الأمني من خلال هذه السيناريوهات الواقعية</p>
+            <div class="scenarioGrid" id="scenarioGrid"></div>
+        </section>
+
+        <section id="factCards">
+            <p class="sectTitle">هل تعلم؟</p>
+            <div class="factsGrid" id="factsGrid"></div>
+        </section>
+
+        <section id="learnMore">
+            <div class="learnContent">
+                <p class="learnTitle">فهم الأمن السيبراني</p>
+                <p class="learnPreview">
+                    الأمن السيبراني لا يتعلق فقط بالتكنولوجيا، بل بالوعي.
+                    يقع ملايين الأشخاص يوميًا ضحية لعمليات احتيال كان يمكن تجنبها.
+                    <span class="learnExpanded" id="learnExpanded">
+                        أصبحت هجمات التصيّد والاختراق أكثر تطورًا.
+                        يستخدم المحتالون أساليب نفسية لخداع الضحايا وخلق شعور زائف بالخطر.
+                        الخبر الجيد؟ يمكن منع معظم الهجمات باتباع ممارسات بسيطة:
+                        تحقق من هوية المرسل، لا تشارك كلمات المرور، فعّل المصادقة الثنائية،
+                        وفكّر قبل ما تضغط.
+                    </span>
+                </p>
+                <button id="readMoreBtn">اقرأ المزيد</button>
+            </div>
+            <div class="phoneGif"></div>
+        </section>
+
+        <section id="randomTip">
+            <div class="tipCard">
+                <div class="tipBadge">💡</div>
+                <p class="tipTitle">نصيحة أمان اليوم</p>
+                <p class="tipText" id="tipText"></p>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <p class="secTitle">معرض التوعية</p>
+            <div class="sliderContainer">
+                <button class="sliderBtn sliderPrev" id="sliderPrev">‹</button>
+                <div class="sliderContent">
+                    <div class="sliderTrack" id="sliderTrack"></div>
+                </div>
+                <button class="sliderBtn sliderNext" id="sliderNext">›</button>
+            </div>
+            <div class="sliderDots" id="sliderDots"></div>
+        </section>
+
+        <section id="lightBox"></section>
+
+        <section id="contact">
+            <p class="secTitle">تواصل معنا</p>
+            <div class="contactContent">
+                <div class="contactForm">
+                    <p class="formTitle">أرسل لنا رسالة</p>
+                    <form>
+                        <div class="inputContainer">
+                            <label>الاسم</label>
+                            <input type="text" placeholder="أدخل اسمك">
+                        </div>
+                        <div class="inputContainer">
+                            <label>البريد الإلكتروني</label>
+                            <input type="email" placeholder="أدخل بريدك الإلكتروني">
+                        </div>
+                        <div class="inputContainer">
+                            <label>الموضوع</label>
+                            <input type="text" placeholder="ما هو الموضوع؟">
+                        </div>
+                        <div class="inputContainer">
+                            <label>الرسالة</label>
+                            <textarea></textarea>
+                        </div>
+                    </form>
+                    <div id="sendBtn">
+                        إرسال الرسالة
+                    </div>
+                </div>
+
+                <div class="contactCards">
+                    <div class="contactInfo">
+                        <p class="formTitle2">معلومات التواصل</p>
+                        <div class="infoDivs">
+                            <div class="infoDiv">
+                                <img src="Images/Icons/mail.svg" alt="">
+                                <div class="divText">
+                                    <p class="divTitle">البريد الإلكتروني</p>
+                                    <p class="divContent">info@datashield.com</p>
+                                    <p class="divContent">support@datashield.com</p>
+                                </div>
+                            </div>
+                            <div class="infoDiv">
+                                <img src="Images/Icons/phone.svg" alt="">
+                                <div class="divText">
+                                    <p class="divTitle">الهاتف</p>
+                                    <p class="divContent">+1 (800) 555-1234</p>
+                                    <p class="divContent">من الإثنين إلى الجمعة، 9 صباحًا – 6 مساءً</p>
+                                </div>
+                            </div>
+                            <div class="infoDiv">
+                                <img src="Images/Icons/mail.svg" alt="">
+                                <div class="divText">
+                                    <p class="divTitle">العنوان</p>
+                                    <p class="divContent">123 شارع الأمن السيبراني</p>
+                                    <p class="divContent">مدينة التقنية، 12345</p>
+                                    <p class="divContent">الولايات المتحدة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report">
+                        <p class="reportTitle">الإبلاغ عن عملية احتيال</p>
+                        <p class="reportP">
+                            إذا صادفت عملية احتيال أو رسالة تصيّد، قم بالإبلاغ عنها فورًا لحماية الآخرين.
+                        </p>
+                        <a class="reportBtn" href="#contact">أبلِغ الآن</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footerContent">
+            <div class="footerTop">
+                <div class="footerBrand">
+                    <div class="footerLogo"></div>
+                    <p class="footerSlogan">فكّر قبل ما تضغط</p>
+                </div>
+                <div class="footerLinks">
+                    <div class="footerColumn">
+                        <p class="fTitle">روابط سريعة</p>
+                        <a href="#">الرئيسية</a>
+                        <a href="#stats">تعلّم</a>
+                        <a href="#gallery">المعرض</a>
+                        <a href="#contact">تواصل</a>
+                    </div>
+                    <div class="footerColumn">
+                        <p class="fTitle">الموارد</p>
+                        <a href="#">نصائح الأمان</a>
+                        <a href="#">الإبلاغ عن احتيال</a>
+                        <a href="#">الأسئلة الشائعة</a>
+                    </div>
+                    <div class="footerColumn">
+                        <p class="fTitle">تابعنا</p>
+                        <div class="socialIcons">
+                            <a href="#" class="socialIcon">ف</a>
+                            <a href="#" class="socialIcon">ت</a>
+                            <a href="#" class="socialIcon">ا</a>
+                            <a href="#" class="socialIcon">ل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerBottom">
+                <p>© 2024 داتاشيلد. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="scrollToTop" class="scrollToTop">
+        <img src="Images/Icons/arrowTop.svg" alt="">
+    </a>
+
+    <script src="home.js"></script>
+</body>
+</html>

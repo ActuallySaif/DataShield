@@ -1,3 +1,12 @@
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 2400);
+});
+
+
+
+
 let statsSec = document.getElementById("stats");
 
 let cards = [
