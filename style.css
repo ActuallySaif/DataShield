@@ -985,3 +985,33 @@ footer {
     color: rgba(253, 245, 237, 0.5);
     font-size: var(--vSmallFont);
 }
+
+.scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--orangeaccents);
+    color: var(--textWhite);
+    border: none;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-family: 'Outfit';
+}
+
+.scrollToTop.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scrollToTop:hover {
+    background: var(--oppAccents);
+    color: var(--textBlack);
+    transform: scale(1.1);
+}
