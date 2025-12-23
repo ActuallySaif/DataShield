@@ -339,3 +339,30 @@ let themeSwitcher = document.getElementById("themeSwitcher");
 themeSwitcher.addEventListener("click", () => {
     document.body.classList.toggle('lightMode');
 })
+
+
+
+
+
+
+function saveFormData() {
+    let contactName = document.getElementById("name").value;
+    let contactEmail = document.getElementById("email").value;
+    let contactSubject = document.getElementById("subject").value;
+    let contactMsg = document.getElementById("message").value;
+    let formErrMsg = document.getElementById("formErrMsg");
+    let formSuccessMsg = document.getElementById("formSuccessMsg");
+
+    localStorage.setItem("localContactName", contactName);
+    localStorage.setItem("localContactEmail", contactEmail);
+    localStorage.setItem("localContactSubject", contactSubject);
+    localStorage.setItem("localContactMsg", contactMsg);
+
+    if (contactName == "" || contactEmail == "" || contactSubject == "" || contactMsg == "") {
+        formErrMsg.style.display = 'inline'
+    } else {
+        formSuccessMsg.style.display = 'inline'
+        formErrMsg.style.display = 'none'
+    }
+}
+

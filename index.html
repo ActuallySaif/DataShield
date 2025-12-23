@@ -159,9 +159,11 @@
                             <textarea name="message" id="message"></textarea>
                         </div>
                     </form>
-                    <div id="sendBtn">
+                    <div onclick="saveFormData()" id="sendBtn">
                         Send Message
                     </div>
+                    <p id="formErrMsg">Please fill out all the form data</p>
+                    <p id="formSuccessMsg">Message Sent Successfully!</p>
                 </div>
                 <div class="contactCards">
                     <div class="contactInfo">

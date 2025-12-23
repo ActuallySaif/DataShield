@@ -1396,3 +1396,15 @@ footer {
     flex-direction: column;
     gap: 25px;
 }
+
+#formErrMsg{
+    color: var(--orangeaccents);
+    font-size: var(--normFont);
+    display: none;
+}
+
+#formSuccessMsg{
+    color: green;
+    font-size: var(--normFont);
+    display: none;
+}
