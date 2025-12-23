@@ -16,6 +16,8 @@
     --LogoHeader: url(Images/LogoWhite.svg);
     --navBord: 3px solid #000;
     --whiteBg: white;
+    --darkBg : #1A1A1A;
+    --blackBg: black;
 }
 
 ::-webkit-scrollbar {
@@ -738,7 +740,7 @@ label{
     border-radius: 20px;
     font-family: 'Outfit';
     font-size: var(--vSmallFont);
-    height: 180px;
+    height: 290px;
 }
 
 #sendBtn{
@@ -866,6 +868,7 @@ label{
     font-size: var(--vSmallFont);
     font-weight: 300;
     color: var(--textWhite);
+    width: 70%;
 }
 
 .reportBtn{
@@ -873,5 +876,112 @@ label{
     color: var(--orangeaccents);
     background-color: var(--textWhite);
     padding: 16px;
-    border: 90px;
+    border-radius: 90px;
+    font-size: var(--smallFont);
+    font-weight: 600;
+    width: fit-content;
+    transition: all 200ms ease;
+}
+
+.reportBtn:hover{
+    border-radius: 5px 5px 35px 35px;
+}
+
+footer {
+    background: var(--cardBg);
+    padding: 60px 50px 30px;
+    border-top: 1px solid #333;
+}
+
+.footerContent {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footerBrand {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footerLogo {
+    width: 240px;
+    height: 50px;
+    background: var(--LogoHeader);
+    margin-bottom: 20px;
+}
+
+.footerSlogan {
+    font-size: var(--smallFont);
+    color: rgba(253, 245, 237, 0.7);
+    font-weight: 500;
+}
+
+.footerLinks {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fTitle {
+    font-size: var(--smallFont);
+    color: var(--oppAccents);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footerColumn a {
+    color: rgba(253, 245, 237, 0.7);
+    text-decoration: none;
+    font-size: var(--vSmallFont);
+    transition: color 0.3s ease;
+}
+
+.footerColumn a:hover {
+    color: var(--orangeaccents);
+}
+
+.socialIcons {
+    display: flex;
+    gap: 15px;
+}
+
+.socialIcon {
+    width: 40px;
+    height: 40px;
+    background: var(--mainBg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--oppAccents);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+    background: var(--orangeaccents);
+    transform: scale(1.1);
+}
+
+.footerBottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    color: rgba(253, 245, 237, 0.5);
+    font-size: var(--vSmallFont);
 }
