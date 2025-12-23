@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datashield | Login</title>
+    <title>Datashield | Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="Images/Icon.png">
 </head>
-<body>
+<body class="lightMode">
     <header>
         <div class="headerLeft">
             <div class="logo"></div>
@@ -16,6 +16,7 @@
                 <a href="#stats">Learn</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#contact">Contact</a>
+                <div id="themeSwitcher"></div>
             </nav>
         </div>
         <div class="headerRight">
@@ -30,7 +31,7 @@
                     <p class="heroTitle"><span>Think</span> before you click</p>
                     <p class="heroSub">Fake links. Fake messages. Real consequences.</p>
                 </div>
-                <img class="heroGif" src="Images/DataGifAnim.gif" alt="">
+                <div class="heroGif"></div>
             </div>
             <a class="heroCta" href="#">Protect Yourself</a>
         </section>
@@ -101,7 +102,7 @@
                 </p>
                 <button id="readMoreBtn">Read More</button>
             </div>
-            <img class="phoneGif" src="Images/PhoneGifAnim.gif" alt="">
+            <div class="phoneGif"></div>
         </section>
 
         <section id="randomTip">
@@ -236,7 +237,9 @@
             </div>
         </footer>
 
-        <button id="scrollToTop" class="scrollToTop">↑</button>
+        <a href="#" id="scrollToTop" class="scrollToTop">
+            <img src="Images/Icons/arrowTop.svg" alt="">
+        </a>
 
 
 

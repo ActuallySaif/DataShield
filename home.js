@@ -325,4 +325,8 @@ function closeLightBox() {
     lightboxImg4.style.display = 'none';
 }
 
+let themeSwitcher = document.getElementById("themeSwitcher");
 
+themeSwitcher.addEventListener("click", () => {
+    document.body.classList.toggle('lightMode');
+})
