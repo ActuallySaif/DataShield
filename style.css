@@ -1109,3 +1109,303 @@ footer {
     color: var(--textBlack);
     transform: scale(1.1);
 }
+
+
+
+
+/* ---------------- LOGIN PAGE ------------------------ */
+
+
+.loginContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .loginLeft {
+            flex: 1;
+            color: var(--textWhite);
+        }
+
+        .logoContainer {
+            display: flex;
+            align-items: center;
+        }
+
+        .logoIcon {
+            width: 50px;
+            height: 50px;
+            background: var(--orangeaccents);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .logoText {
+            font-size: var(--bigFont);
+            font-weight: 700;
+            color: var(--textWhite);
+        }
+
+        .welcomeTitle {
+            font-size: var(--heroFont);
+            font-weight: 700;
+            color: var(--textWhite);
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+
+        .welcomeDesc {
+            font-size: var(--smallFont);
+            color: var(--textMuted);
+            margin-bottom: 50px;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .featureList {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .featureItem {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .featureIcon {
+            width: 24px;
+            height: 24px;
+            background: var(--orangeaccents);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .featureText {
+            font-size: var(--vSmallFont);
+            color: var(--textMuted);
+        }
+
+        .loginRight {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .loginCard {
+            background: var(--oppAccents);
+            border-radius: 30px;
+            padding: 50px;
+        }
+
+        .loginTitle {
+            font-size: var(--cardTitle);
+            font-weight: 700;
+            color: var(--textBlack);
+            margin-bottom: 10px;
+        }
+
+        .loginSubtitle {
+            font-size: var(--vSmallFont);
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 30px;
+        }
+
+        .formGroup {
+            margin-bottom: 20px;
+        }
+
+        .formLabel {
+            display: block;
+            font-size: var(--vSmallFont);
+            font-weight: 600;
+            color: var(--textBlack);
+            margin-bottom: 8px;
+        }
+
+        .inputWrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .inputIcon {
+            position: absolute;
+            left: 20px;
+            color: rgba(0, 0, 0, 0.4);
+            font-size: 18px;
+        }
+
+        .formInput {
+            width: 100%;
+            padding: 16px 20px 16px 20px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            font-size: var(--vSmallFont);
+            font-family: 'Outfit', sans-serif;
+            background: var(--whiteBg);
+            transition: all 0.3s ease;
+        }
+
+        .formInput:focus {
+            outline: none;
+            border-color: var(--orangeaccents);
+        }
+
+        .formInput::placeholder {
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+
+        #signInBtn {
+            width: 100%;
+            padding: 18px;
+            background: var(--orangeaccents);
+            color: var(--textWhite);
+            border: none;
+            border-radius: 15px;
+            font-size: var(--smallFont);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        #signInBtn:hover {
+            background: #e66f00;
+            border-radius: 40px 40px 10px 10px;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .divider::before {
+            left: 0;
+        }
+
+        .divider::after {
+            right: 0;
+        }
+
+        .dividerText {
+            font-size: var(--vSmallFont);
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .socialButtons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .socialBtn {
+            flex: 1;
+            padding: 15px;
+            background: var(--whiteBg);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            font-size: var(--vSmallFont);
+            font-weight: 600;
+            color: var(--textBlack);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .socialBtn:hover {
+            background: rgba(0, 0, 0, 0.05);
+            border-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px 10px 40px 40px;
+        }
+
+        .signUpText {
+            text-align: center;
+            font-size: var(--vSmallFont);
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .signUpLink {
+            color: var(--orangeaccents);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .signUpLink:hover {
+            text-decoration: underline;
+        }
+
+        .securityNotice {
+            background: var(--cardBg);
+            padding: 20px 25px;
+            border-radius: 20px;
+            display: flex;
+            align-items: start;
+            gap: 15px;
+        }
+
+        .securityIcon {
+            width: 20px;
+            height: 20px;
+            background: var(--orangeaccents);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .securityText {
+            font-size: 14px;
+            color: var(--textMuted);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 1024px) {
+            .loginContainer {
+                flex-direction: column;
+                gap: 60px;
+            }
+
+            .loginLeft {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .welcomeTitle {
+                font-size: var(--secTitle);
+            }
+
+            .loginRight {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 450px;
+            }
+        }

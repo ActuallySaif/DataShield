@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datashield | Sign In</title>
+    <link rel="icon" href="Images/Icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loginContainer">
+        <div class="loginLeft">
+            <div class="logoContainer">
+                <img src="Images/LogoWhite.svg" alt="">
+            </div>
+            <h1 class="welcomeTitle">Welcome Back</h1>
+            <p class="welcomeDesc">Sign in to access your security dashboard and continue protecting yourself from cyber threats.</p>
+            <div class="featureList">
+                <div class="featureItem">
+                    <div class="featureIcon">🛡</div>
+                    <div class="featureText">Secure authentication</div>
+                </div>
+                <div class="featureItem">
+                    <div class="featureIcon">🛡</div>
+                    <div class="featureText">Track your learning progress</div>
+                </div>
+                <div class="featureItem">
+                    <div class="featureIcon">🛡</div>
+                    <div class="featureText">Personalized security tips</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="loginRight">
+            <div class="loginCard">
+                <h2 class="loginTitle">Sign In</h2>
+                <p class="loginSubtitle">Enter your credentials to continue</p>
+
+                <form>
+                    <div class="formGroup">
+                        <label class="formLabel">Email Address</label>
+                        <div class="inputWrapper">
+                            <input id="email" type="email" class="formInput" placeholder="your.email@example.com">
+                        </div>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="formLabel">Password</label>
+                        <div class="inputWrapper">
+                            <input id="pass" type="password" class="formInput" placeholder="Enter your password">
+                        </div>
+                    </div>
+
+                    <button id="signInBtn">Sign In</button>
+
+                    <div class="socialButtons">
+                        <button type="button" class="socialBtn">Google</button>
+                        <button type="button" class="socialBtn">Microsoft</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="securityNotice">
+                <div class="securityIcon">🛡</div>
+                <p class="securityText">Your connection is secured with end-to-end encryption. We never store your password in plain text.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="local.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
