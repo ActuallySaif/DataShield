@@ -1386,26 +1386,13 @@ footer {
             line-height: 1.5;
         }
 
-        @media (max-width: 1024px) {
-            .loginContainer {
-                flex-direction: column;
-                gap: 60px;
-            }
+#errMsg{
+    color: var(--orangeaccents);
+    display: none;
+}
 
-            .loginLeft {
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .welcomeTitle {
-                font-size: var(--secTitle);
-            }
-
-            .loginRight {
-                flex: 0 0 auto;
-                width: 100%;
-                max-width: 450px;
-            }
-        }
+.formButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
